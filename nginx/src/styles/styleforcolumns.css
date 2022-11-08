@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Pacifico&display=swap');
+ .rec-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 9em;
+    margin-bottom: 1em;
+ }
+ .rec-item {
+    padding: 10px;
+ }
+ .rec-item a {
+    display: block;
+    text-decoration: none;
+    color: white;
+ }
+ .rec-item-wrap {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: rgb(255, 255, 255);
+ }
+ .rec-item img {
+    display: block;
+    width: 100%;
+    opacity: .75;
+    transition: .5s ease-in-out;
+ }
+.h{
+   -webkit-text-stroke: 0.2mm #000000;
+}
+ .rec-item-inner {
+    position: absolute;
+    top: 45%;
+    left: 7%;
+    right: 7%;
+    bottom: 45%;
+    border: 1px solid white;
+    border-width: 0 1px 1px;
+    transition: .4s ease-in-out;
+    font-size: 1.5em;
+    font-family: 'Corinthia', cursive;
+    text-decoration:none;
+    -webkit-text-stroke: 0.06mm #000000;
+    letter-spacing: 0.36mm;
+    
+ }
+ .rec-heading {
+    overflow: hidden;
+    transform: translateY(-50%);
+ }
+ .rec-heading h3 {
+    font-family: 'Pattaya', sans-serif;
+    font-weight: normal;
+    display: table;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+ }
+ .rec-heading h3:before, .rec-heading h3:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 1px;
+    background: white;
+ }
+ .rec-heading h3:before {
+    left: -50px;
+ }
+ .rec-heading h3:after {
+    right: -50px;
+ }
+ .rec-item-inner ul {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    opacity: 0;
+    list-style: none;
+    font-family: 'Raleway', sans-serif;
+    transition: .4s ease-in-out;
+ }
+ .rec-item-inner li {
+    position: relative;
+    font-size: 20px;
+    padding: 10px 0;
+    margin-bottom: 4px;
+    font-family: 'Pattaya', sans-serif;
+ }
+ .rec-item-inner li:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -4px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 10px 0 0 white, -10px 0 0 white;
+ }
+ .rec-item-inner li:last-child:after {
+    content: none;
+ }
+ .rec-item:hover img {
+    opacity: 0.45;
+    transform: scale(1.1);
+ }
+ .rec-item:hover .rec-item-inner {
+    top: 20%;
+    bottom: 2%;
+ }
+ .rec-item:hover ul {
+    opacity: 1;
+    transition-delay: .5s;
+ }
+ @media (min-width: 530px) {
+    .rec-item {
+       flex-basis: 50%;
+       flex-shrink: 0;
+    }
+ }
+ @media (min-width: 768px) {
+    .rec-item {
+       flex-basis: 33.333333333%;
+    }
+ }
+ 
