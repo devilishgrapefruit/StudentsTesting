@@ -1,6 +1,6 @@
 CREATE DATABASE IF NOT EXISTS testsDB;
 CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'password';
-GRANT SELECT,UPDATE,INSERT ON testsDB.* TO 'user'@'%';
+GRANT SELECT,UPDATE,INSERT,DELETE ON testsDB.* TO 'user'@'%';
 FLUSH PRIVILEGES;
 
 USE testsDB;
@@ -65,14 +65,15 @@ CREATE TABLE IF NOT EXISTS answers (
 
 INSERT INTO users (login, password, email)
 VALUES 
-    ('user', 'user', 'user@gmail.com'),
+    ('user', '{SHA}Et6pb+wgWTVmq3VpLJlJWWgzrck=', 'user@gmail.com'),
     ('admin', '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8=', 'patinalera@gmail.com');
 
 INSERT INTO user_role (user_id,roles)
 VALUES 
-    (1, 'АДМИНИСТРАТОР');
+    (1, 'АДМИНИСТРАТОР'),
+    (2, 'ПОЛЬЗОВАТЕЛЬ');
 
-INSERT INTO tests (title, subject, author)
+INSERT INTO tests (title, discipline, author)
 VALUES 
     ('Основы права', 'Правоведение', 1),
     ('Комплексные числа', 'Математические анализ', 1);
