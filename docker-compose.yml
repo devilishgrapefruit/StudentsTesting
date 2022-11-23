@@ -8,11 +8,10 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./nginx/src:/data/nginx/
+      - ./nginx/files:/var/www/files/
 
   apache:
     build:  ./apache
-    ports: 
-      - 28:80
     volumes:
       - ./apache/src:/var/www/html
       - ./apache/000-default.conf:/etc/apache2/sites-available/000-default.conf
@@ -21,7 +20,18 @@ services:
     image: mysql
     volumes:
       - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
-#    command: mysqld --init-file="/docker-entrypoint-initdb.d/init.sql"
+    command: mysqld --init-file="/docker-entrypoint-initdb.d/init.sql"
     environment:
       MYSQL_ROOT_PASSWORD: password
+   
+  redis:
+    image: redis
+    volumes:
+      - ./redis/sessions/redis.conf:/usr/local/etc/redis/redis.conf
+    ports:
+      - 6379:6379
+
+
+  
+  
     

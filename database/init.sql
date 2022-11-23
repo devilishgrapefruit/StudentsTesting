@@ -4,11 +4,12 @@ GRANT SELECT,UPDATE,INSERT,DELETE ON testsDB.* TO 'user'@'%';
 FLUSH PRIVILEGES;
 
 USE testsDB;
--- DROP TABLE users, students, user_role;
+-- DROP TABLE users, students;
 CREATE TABLE IF NOT EXISTS users (
     id INT(11) NOT NULL AUTO_INCREMENT,
     login VARCHAR(30) NOT NULL,
     password VARCHAR(40) NOT NULL,
+    role VARCHAR(20) NOT NULL,
     email VARCHAR(40) NOT NULL,
     PRIMARY KEY (id)
     );
@@ -27,18 +28,11 @@ CREATE TABLE IF NOT EXISTS students (
     PRIMARY KEY (student_id)
     );
 
-CREATE TABLE IF NOT EXISTS user_role (
-    role_id INT(11) NOT NULL AUTO_INCREMENT,
-    user_id INT(11) NOT NULL,
-    roles VARCHAR(60),
-    FOREIGN KEY (user_id) REFERENCES users (id),
-    PRIMARY KEY (role_id)
-);
 
 CREATE TABLE IF NOT EXISTS tests (
     id INT(11) NOT NULL AUTO_INCREMENT,
     title VARCHAR(40) NOT NULL,
-    discipline VARCHAR(30) NOT NULL,
+    discipline VARCHAR(60) NOT NULL,
     author INT(11) NOT NULL,
     FOREIGN KEY (author) REFERENCES users (id),
     PRIMARY KEY (id)
@@ -63,15 +57,12 @@ CREATE TABLE IF NOT EXISTS answers (
     PRIMARY KEY (answer_id)
     );
 
-INSERT INTO users (login, password, email)
+INSERT INTO users (login, password, role, email)
 VALUES 
-    ('user', '{SHA}Et6pb+wgWTVmq3VpLJlJWWgzrck=', 'user@gmail.com'),
-    ('admin', '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8=', 'patinalera@gmail.com');
+    ('user', '{SHA}Et6pb+wgWTVmq3VpLJlJWWgzrck=', 'USER', 'user@gmail.com'),
+    ('lera', 'lera', 'ADMIN', 'patinalera@gmail.com'),
+    ('admin', '{SHA}QL0AFWMIX8NRZTKeof9cXsvbvu8=', 'ADMIN', 'patinalera@gmail.com');
 
-INSERT INTO user_role (user_id,roles)
-VALUES 
-    (1, 'АДМИНИСТРАТОР'),
-    (2, 'ПОЛЬЗОВАТЕЛЬ');
 
 INSERT INTO tests (title, discipline, author)
 VALUES 

@@ -1,6 +1,6 @@
 <?php
 require_once 'functions.php';
-include "../config/Database.php";
+include "../config/database.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -37,8 +37,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
         echo 1;
         break;
     case 'PUT':
-        $stmt = $db->prepare("UPDATE users SET name=?, password=?, email=? WHERE id=?");
-        $res = $stmt->bind_param('sssi', $body['name'], $body['password'],$body['email'], $body['id']);
+        $stmt = $db->prepare("UPDATE users SET login=?, password=?, email=? WHERE id=?");
+        $res = $stmt->bind_param('sssi', $body['login'], $body['password'],$body['email'], $body['id']);
         $stmt->execute();
 
         break;

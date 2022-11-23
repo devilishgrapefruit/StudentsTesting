@@ -17,19 +17,18 @@
     white-space: nowrap;
   }  
 
+
 .menu{
     margin-bottom: 3em;
 }
 .menua {
-    font-family: 'Corinthia', cursive;
     text-decoration:none;
-    font-size: 1.8em;
+    font-size: 2em;
     color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.2mm #000000;
-    letter-spacing: 0.36mm;
+    letter-spacing: 1mm;
 }
 a:hover{
-    color: rgba(243, 205, 142, 0.937);
+    color: rgba(142, 243, 206, 0.937);
 }
 
 .logo {
@@ -43,13 +42,13 @@ a:hover{
     width: 9em;
     height: 6em;
 }
+
 .mytitle{
     color: white;
     padding-left: 6%;
     font-size: 2.2em;
-    font-family: 'Pacifico', cursive;
     -webkit-text-stroke: 0.2mm #000000;
-    letter-spacing: 4mm;
+    letter-spacing: 1mm;
     font-weight:normal;
     white-space: nowrap;
 }
@@ -64,8 +63,8 @@ h1{
 }
 
 body {
-    background-color: #faf3f0;
-    color: rgb(0, 0, 0);
+    background-color:  #faf3f0;
+    color: rgb(248, 249, 251);
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -98,12 +97,80 @@ body {
     gap: 4em;
     margin-bottom: 4em;
 }
+.button_setting {
+    color: white;
+}
+.h_settings{
+    color: white;
+}
+h2{
+    color: black;
+}
+.settings{
+    margin-top: 10em;
+    margin-bottom: 4em;
+    width: 25%;
+    height: 70%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #006a71;
+}
+.setting{
+    color: white;
+    font-size: 1.1em;
+    font-family: cursive;
+    -webkit-text-stroke: 0.07mm #000000;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    background-color: #006a71;
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+
+.pdfcontainer{
+    margin-top: 10em;
+    margin-bottom: 4em;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #006a71;
+}
+.pdfform{
+    background-color: #006a71;
+}
+.pdf{
+    color: white;
+    font-size: 1.1em;
+    font-family: cursive;
+    -webkit-text-stroke: 0.07mm #000000;
+    padding-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    background-color: #006a71;
+    transition: 0.5s;
+    transition-timing-function: linear;
+}
+.home{
+    text-decoration:none;
+    color: white;
+}
 .container {
     margin-bottom: 1em;
 }
 #cont {
     transition: 0.5s;
     transition-timing-function: linear;
+    color: black;
 }
 #cont:hover{
     transform: scale(1.2); 
@@ -166,7 +233,7 @@ input {
   height: 30px;
   padding-left: 10px;
 }
-button {
+/* button {
     padding-top: 1mm;
   position: absolute;
   top: 0;
@@ -178,7 +245,7 @@ button:before {
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
-}
+} */
 .menua2{
     font-family: 'Pacifico', cursive;
     text-decoration:none;

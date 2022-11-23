@@ -1,5 +1,5 @@
 <?php
-require_once("../config/Database.php");
+require_once("../config/database.php");
 $database = new Database();
 $db = $database->getConnection();
 $stmt = $db->prepare("INSERT INTO tests (title, discipline, author) VALUES (?, ?, ?)");

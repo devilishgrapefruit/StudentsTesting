@@ -1,6 +1,6 @@
 <?php
 require_once 'functions.php';
-include "../config/Database.php";
+include "../config/database.php";
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");

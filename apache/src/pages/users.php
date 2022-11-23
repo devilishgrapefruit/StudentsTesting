@@ -26,7 +26,7 @@ foreach ($result as $row) {
     echo "Удалить пользователя ↓";
     echo "</a><br>";
 
-    echo "{$row['id']} {$row['login']} {$row['email']}</li>";
+    echo "{$row['id']} {$row['login']} {$row['email']} </li>";
 }
 echo "</ul>";
 ?>
