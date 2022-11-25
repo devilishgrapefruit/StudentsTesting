@@ -1,6 +1,7 @@
 <?php 
     require_once 'login.php';
-    
+    require_once 'constants.php';
+    $dictionary = $dict[$_SESSION['language']];
 
     if (substr($_FILES['userfile']['name'], -4) == ".pdf"){
         $file_data_redis = json_encode($file_data);
@@ -9,8 +10,7 @@
     }
     else {
         echo '<pre>';
-        echo 'Расширение файла должно быть .pdf<br>';
-        echo 'The file extension must be .pdf';
+        echo $dictionary->PDF;
         echo '</pre>';
     }
 ?>

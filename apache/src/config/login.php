@@ -21,10 +21,8 @@
     }
 
     session_start();
-
     $redis = new Redis();
     $redis->connect('redis', 6379);
-    
     $redis_data = json_decode($redis->get($_SERVER['PHP_AUTH_USER']));
 
     if (!$redis_data) {

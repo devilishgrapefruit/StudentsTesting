@@ -33,6 +33,9 @@
         public $SEND_FILE;
         public $UPLOADING_FILES;
         public $DOWNLOAD_FILE;
+        public $PDF;
+        public $DIAGRAMS;
+        public $GRAPHICS;
 
     }
 
@@ -64,6 +67,9 @@
         public $SEND_FILE = "Отправить файл";
         public $UPLOADING_FILES = "Загруженные файлы";
         public $DOWNLOAD_FILE = "Скачать";
+        public $PDF = "Расширение файла должно быть .pdf";
+        public $DIAGRAMS = "Диаграммы";
+        public $GRAPHICS = "Графики";
     }
 
     class ENG_DICT extends DICT
@@ -95,6 +101,9 @@
         public $SEND_FILE = "Send file";
         public $UPLOADING_FILES = "Uploaded files";
         public $DOWNLOAD_FILE = "Download";
+        public $PDF = "Расширение файла должно быть .pdf";
+        public $DIAGRAMS = "Diagrams";
+        public $GRAPHICS = "Graphics";
     }
 
         $dict = [

@@ -1,0 +1,10 @@
+Data:
+    data{0..60}:
+      average_rating_students: '<numberBetween(0, 100)>'
+      activity_for_year: '<numberBetween(0, 100)>'
+      students_groups2018: '<numberBetween(20, 35)>'
+      students_groups2019: '<numberBetween(23, 32)>'
+      students_groups2020: '<numberBetween(25, 34)>'
+      students_groups2021: '<numberBetween(26, 34)>'
+      students_groups2022: '<numberBetween(28, 36)>'
+      

@@ -1,0 +1,17 @@
+{
+    "authors": [
+    {
+        "name": "Valeria Patina",
+        "email": "patinalera@gmail.com"
+    }],
+    "repositories": [
+        {
+          "type": "composer",
+          "url": "https://asset-packagist.org"
+        }
+      ],
+    "require": {
+        "nelmio/alice": "3.7.0",
+        "szymach/c-pchart": "3.0.9"
+    }
+}

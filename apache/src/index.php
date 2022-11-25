@@ -33,6 +33,7 @@ $dictionary = $dict[$_SESSION['language']];
           </ul>
       </nav>
 </header>
+<a  href="/diagrams/diagrams.php"><?php echo $dictionary->DIAGRAMS?></a>
 <footer> 2022 <?php echo $dictionary->STUDENTSTESTINGSERVICE?></footer>
 </body>
 </html>
